@@ -7,6 +7,7 @@
 
 <div class="row">
     <div class="col-md-7">
+        <div class="widget p-5">        
         <form asp-action="AddOrEdit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" name="CategoryId" value="CategoryId" ></input>
@@ -29,7 +30,14 @@
             </div>
             <ejs-button id="submit" type="submit" content="Submit" cssClass="e-success"></ejs-button>
         </form>
-    </div>
+        </div>
+        
+        </div>
+            <div class="col-md-5">
+            <div class="widget h-100 d-flex justify-content-center align-items-center">
+                <i class="fa-solid fa-shapes fa-2xl"></i>
+            </div>
+    </div>            
 </div>
 
 <div>
