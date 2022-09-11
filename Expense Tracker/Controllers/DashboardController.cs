@@ -1,6 +1,7 @@
 ﻿using Expense_Tracker.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Syncfusion.EJ2.Charts;
 using System.Globalization;
 
 namespace Expense_Tracker.Controllers
@@ -52,11 +53,23 @@ namespace Expense_Tracker.Controllers
                 {
                     categoryTitleWithIcon = k.First().Category.Icon + " " + k.First().Category.Title,
                     amount = k.Sum(j => j.Amount),
-                    formattedAmount = k.Sum(j => j.Amount).ToString("C)"),
+                    formattedAmount = k.Sum(j => j.Amount).ToString("C0"),
                 })
+                .OrderByDescending(l => l.amount)
                 .ToList();
+
+            //Spline Chart - TotalIncome vs Expense
+            //Income
+
 
             return View();
         }
+    }
+
+    public class SplineChartData
+    {
+        public string day;
+        public int income;
+        public int expense;
     }
 }
