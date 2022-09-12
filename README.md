@@ -1,7 +1,8 @@
 # Expense_Tracker (Wallet App)
 
 App build in ASP.NET Core.
-This app can help you with tracing your expenses and income. 
+This app can help you with tracing your expenses and incomes.
+In easy way you can create category for expense/income than make transaction in this category. 
 If you want to try this app download this and change values for your preferences and settings.
 
 
